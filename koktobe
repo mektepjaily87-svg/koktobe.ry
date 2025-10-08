@@ -229,12 +229,15 @@ async def send_question(query, context):
     await query.message.reply_text(question, reply_markup=reply_markup)
 
 # ---------------- Запуск ----------------
+import asyncio
+
 def main():
     app = Application.builder().token(TOKEN).build()
+
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(button))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, custom_answer))
-    app.run_polling()
 
-if __name__ == "__main__":
-    main()
+    print("🤖 Бот іске қосылды... Telegram-да /start деп көріңіз.")
+    asyncio.run(app.run_polling())
+
