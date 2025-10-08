@@ -10,7 +10,7 @@ from email.mime.text import MIMEText
 from email import encoders
 
 # ---------------- Токен ----------------
-TOKEN = "8342226550:AF11yDdNxdvpLRiWlkTFBNUpLuwn6YyTPg"
+TOKEN = "7873238404:AAELnBRLypysbmd6uqgIXZWdgwKTrWS7pSo"
 
 # ---------------- Сауалнама сұрақтары ----------------
 questions = {
